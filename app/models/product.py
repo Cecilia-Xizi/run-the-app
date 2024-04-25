@@ -4,7 +4,7 @@ from app.db import BaseModel
 
 class Product(BaseModel):
 
-    SHEET_NAME = "products"
+    SHEET_NAME = "Products"
 
     COLUMNS = ["name", "description", "price", "url"]
 

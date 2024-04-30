@@ -26,21 +26,6 @@
     <!-- LOAD BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    <!-- CONFIGURE GOOGLE ANALYTICS  -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.GA_TRACKER_ID }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ config.GA_TRACKER_ID }}');
-
-        // suppress warnings in firefox (not working / need to figure our what domain to use)
-        // see: https://stackoverflow.com/questions/62569419/how-to-set-secure-attribute-of-the-cookies-used-by-google-analytics-global-sit
-        //gtag('config', '{{ config.GA_TRACKER_ID }}', {
-        //    cookie_domain: '{{ config.GA_DOMAIN }}',
-        //    cookie_flags: 'SameSite=None;Secure',
-        //})
-    </script>
 
     <!-- YOUR CUSTOM CSS STYLES HERE -->
     <style>

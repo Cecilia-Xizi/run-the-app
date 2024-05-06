@@ -30,8 +30,20 @@
     <!-- YOUR CUSTOM CSS STYLES HERE -->
     <style>
 
-        /* ... */
+        /* 调整导航栏品牌（Hoya Care Network）的字体大小 */
+    .navbar-brand {
+        font-size: 30px; /* 可以根据需求调整这个值 */
+        font-weight: bold; /* 加粗字体 */
+    }
 
+    /* 调整导航链接（如 Events）的字体大小 */
+    .nav-link {
+        font-size: 24px; /* 可以根据需求调整这个值 */
+    }
+
+    h5 {
+        font-size: 9px; /* Set the size to your preference */
+    }
     </style>
 
     <!-- HEAD BLOCK (ALLOWS CHILD PAGES TO INJECT HEAD CONTENT)  -->
@@ -68,13 +80,13 @@
             TITLE IS DISPLAYED AS THE LINK TEXT
     -->
     {% set public_nav = [
-        ('/products', 'products', 'Products'),
+        ('/products', 'products', 'Events'),
         ('/login', 'login', 'Login'),
       ] -%}
       
       {% set protected_nav = [
-        ('/products', 'products', 'Products'),
-      ('/user/orders', 'user_orders', 'Orders'),
+        ('/products', 'products', 'Events'),
+      ('/user/orders', 'user_orders', 'My Events'),
       ] -%}
 
     <!--
@@ -172,9 +184,7 @@
                     <p class="small">
                         &copy; Copyright 2024 Hoya Care Network
                     </p>
-                    <p class="small white-space: nowrap;">
-                        Made with the <a href="https://github.com/prof-rossetti/flask-sheets-template-2024">Flask Sheets Template 2024</a>
-                    </p>
+                    
                 </div>
             </div>
         </footer>

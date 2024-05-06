@@ -91,6 +91,7 @@
   }
 }
 
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -118,6 +119,10 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-family: "Catamaran", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 800;
   line-height: 1.2;
+}
+
+h5.display-5 {
+  font-size: 14px !important; /* Using !important to override any existing styles */
 }
 
 h1, .h1 {
@@ -156,10 +161,13 @@ h4, .h4 {
   }
 }
 
-h5, .h5 {
-  font-size: 1.25rem;
+h5, h5 {
+  font-size: 14px; /* 设置一个合适的字体大小 */
 }
 
+.display-5 {
+  font-size: 14px; /* 设置一个合适的字体大小 */
+}
 h6, .h6 {
   font-size: 1rem;
 }

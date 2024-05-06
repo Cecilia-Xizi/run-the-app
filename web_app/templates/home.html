@@ -17,31 +17,34 @@
     <div class="bg-circle-3 bg-circle"></div>
     <div class="bg-circle-4 bg-circle"></div>
 </header>
+
 <!-- Content section 1-->
 <section id="scroll">
     <div class="container px-5">
         <div class="row gx-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="web_app\templates\Assets\homepage1.jpg" alt="..." /></div>
-                <!--imgae source:https://images.app.goo.gl/Px38YUjrQVEcGDwi6-->
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='Assets/homepage1.jpg') }}" alt="..." />
+                </div>
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
                     <h2 class="display-4">Who We Are</h2>
-                    <p>We are a nonprofit volunteer organization composed of healthcare professionals, volunteers, and advocates who are passionate about making healthcare accessible to all. Founded in 2024, our team has grown to include diverse talents dedicated to our cause.
-                    </p>
+                    <p>We are a nonprofit volunteer organization composed of healthcare professionals, volunteers, and advocates who are passionate about making healthcare accessible to all. Founded in 2024, our team has grown to include diverse talents dedicated to our cause.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- Content section 2-->
 <section>
     <div class="container px-5">
         <div class="row gx-5 align-items-center">
             <div class="col-lg-6">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="web_app/templates/Assets/homepage2.jpeg" alt="..." /></div>
-                <!--imgae source:https://images.app.goo.gl/moXXbpA5aNs69bQq7-->
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='Assets/homepage2.jpeg') }}" alt="..." />
+                </div>
             </div>
             <div class="col-lg-6">
                 <div class="p-5">
@@ -52,45 +55,52 @@
         </div>
     </div>
 </section>
+
 <!-- Content section 3-->
 <section>
     <div class="container px-5">
         <div class="row gx-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="web_app\templates\Assets\homepage3.jpg" alt="..." /></div>
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='Assets/homepage3.jpg') }}" alt="..." />
+                </div>
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
                     <h2 class="display-4">What We Do</h2>
-                    <h3 class="display-5">Mobile Health Clinics</h3>
-                    <p>We operate mobile clinics that travel to underserved areas, providing essential medical services ranging from primary care to emergency interventions. </p>
-                    <h3 class="display-5">Health Education Workshops</h3>
+                    <h4 class="display-5">Mobile Health Clinics</h3>
+                    <p>We operate mobile clinics that travel to underserved areas, providing essential medical services ranging from primary care to emergency interventions.</p>
+                    <h4 class="display-5">Health Education Workshops</h3>
                     <p>Through our workshops, we educate communities on preventive healthcare, nutritional best practices, and disease management, empowering individuals to take charge of their health.</p>
-                    <h3 class="display-5">Vaccination Drives</h3>
+                    <h4 class="display-5">Vaccination Drives</h3>
                     <p>We organize vaccination drives to prevent the spread of infectious diseases, prioritizing the most vulnerable populations.</p>
-                    <h3 class="display-5">Community Partnerships</h3>
-                    <p>By collaborating with local organizations and health departments, we enhance our reach and impact, ensuring that resources are utilized efficiently and effectively.
-                    </p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Content section 4-->
-<section>
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            <div class="col-lg-6">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="web_app\templates\Assets\homepage4.png" alt="..." /></div>
-                <!--imgae source:https://images.app.goo.gl/moXXbpA5aNs69bQq7-->
-            </div>
-            <div class="col-lg-6">
-                <div class="p-5">
-                    <h2 class="display-4">Join Us</h2>
-                    <p>Are you inspired to make a difference? Join us as a volunteer, partner, or donor, and help us extend our reach to more communities in need. Together, we can transform lives and build healthier futures</p>
+                    <h4 class="display-5">Community Partnerships</h3>
+                    <p>By collaborating with local organizations and health departments, we enhance our reach and impact, ensuring that resources are utilized efficiently and effectively.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Content section 4-->
+<section>
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="{{ url_for('static', filename='Assets/homepage4.png') }}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">Join Us</h2>
+                    <p>Are you inspired to make a difference? Join us as a volunteer, partner, or donor, and help us extend our reach to more communities in need. Together, we can transform lives and build healthier futures.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 {% endblock %}

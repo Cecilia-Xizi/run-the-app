@@ -1,10 +1,11 @@
+
 from pprint import pprint
 
 from app.db import BaseModel
 
 class Product(BaseModel):
 
-    SHEET_NAME = "Products"
+    SHEET_NAME = "products"
 
     COLUMNS = ["name", "description", "price", "url"]
 

@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- PAGE TITLE (CAN BE CUSTOMIZED BY CHILD PAGES) -->
-    {% set default_title = "My App | Made with the Flask Sheets Template 2024" -%}
+    {% set default_title = "Hoya Care Network" -%}
     {% set page_title = page_title|default(default_title) -%}
     <title>{{page_title}}</title>
 
@@ -68,16 +68,14 @@
             TITLE IS DISPLAYED AS THE LINK TEXT
     -->
     {% set public_nav = [
-      ('/about', 'about', 'About'),
-      ('/products', 'products', 'Products'),
-      ('/login', 'login', 'Login'),
-    ] -%}
-
-    {% set protected_nav = [
-      ('/about', 'about', 'About'),
-      ('/products', 'products', 'Products'),
-      ('/user/orders', 'user_orders', 'Orders'),
-    ] -%}
+        ('/events', 'events', 'Events'),
+        ('/login', 'login', 'Login'),
+      ] -%}
+      
+      {% set protected_nav = [
+        ('/events', 'events', 'Events'),
+        ('/user/my_events', 'user_my_events', 'My Events'),
+      ] -%}
 
     <!--
         ACTIVE PAGE (ALLOWS CHILD PAGES TO DESIGNATE THEY ARE THE ACTIVE PAGE)
@@ -107,7 +105,7 @@
                 <!--
                     NAV TITLE
                 -->
-                My App
+                Hoya Care Network
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -172,7 +170,7 @@
             <div class="row">
                 <div class="col-sm-6" style="display: inline; margin-bottom: 5px;">
                     <p class="small">
-                        &copy; Copyright 2024 Your Name Here
+                        &copy; Copyright 2024 Hoya Care Network
                     </p>
                     <p class="small white-space: nowrap;">
                         Made with the <a href="https://github.com/prof-rossetti/flask-sheets-template-2024">Flask Sheets Template 2024</a>

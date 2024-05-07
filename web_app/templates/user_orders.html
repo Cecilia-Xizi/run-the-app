@@ -19,9 +19,8 @@
                     <tr>
                         <th scope="col">Order Id</th>
                         <th scope="col">User Email</th>
-                        <th scope="col">Product ID</th>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Product Price</th>
+                        <th scope="col">Event ID</th>
+                        <th scope="col">Event Name</th>
                         <th scope="col">Timestamp</th>
                     </tr>
                 </thead>
@@ -36,13 +35,10 @@
                             {{ order.user_email }}
                         </td>
                         <td>
-                            {{ order.product_id }}
+                            {{ order.event_id }}
                         </td>
                         <td>
-                            {{ order.product_name }}
-                        </td>
-                         <td>
-                            {{ order.product_price }}
+                            {{ order.event_name }}
                         </td>
                         <td>
                             {{ order.created_at.strftime('%Y-%m-%d %H:%M') }} UTC

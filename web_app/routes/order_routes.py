@@ -36,15 +36,15 @@ def create_order():
     try:
         params = {
             "user_email": user_email,
-            "product_id": int(event_id),
-            "product_name": event_name,
+            "event_id": int(event_id),
+            "event_name": event_name,
         }
         #order = Order(params)
         #order.save()
         # alternatively:
         Order.create(params)
 
-        flash(f"Order received!", "success")
+        flash(f"Registered!", "success")
         return redirect("/user/orders")
     except Exception as err:
         print(err)

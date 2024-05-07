@@ -24,7 +24,7 @@
                             <input type="hidden" name="product_description" value="{{ product.description }}">
                             <input type="hidden" name="product_price" value="{{ product.price }}">
                             <input type="hidden" name="product_url" value="{{ product.url }}">
-                            <button type="submit" class="btn btn-outline-primary mt-auto">Order now!</button> <!-- mt-auto 确保按钮靠底对齐 -->
+                            <button type="submit" class="btn btn-outline-primary mt-auto">Register NOW!</button> <!-- mt-auto 确保按钮靠底对齐 -->
                         </form>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
         {% endfor %}
     </div>
 {% else %}
-    <p>Oops, no products found.</p>
+    <p>Oops, no events found.</p>
 {% endif %}
 
 {% endblock %}

@@ -41,9 +41,26 @@
         font-size: 24px; /* 可以根据需求调整这个值 */
     }
 
-    h5 {
-        font-size: 9px; /* Set the size to your preference */
+    .card-img-top {
+        height: 150px; /* 设置固定高度 */
+        width: 100%; /* 宽度自适应到卡片宽度 */
+        object-fit: cover; /* 裁剪图片以填满容器，可能会裁掉图片的某些部分 */
     }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* 保证卡片内容区域高度一致 */
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* 使卡片高度相等 */
+    }
+    .btn-outline-primary {
+        margin-top: auto; /* 将按钮推至底部 */
+    }
+
+
     </style>
 
     <!-- HEAD BLOCK (ALLOWS CHILD PAGES TO INJECT HEAD CONTENT)  -->

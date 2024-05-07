@@ -4,46 +4,35 @@
 
 {% block content %}
 
-    <h1>Our Events</h1>
 
 
+<h1>Our Events</h1>
 
-    {% if products|length > 0 %}
-
-        <!--div class="container"-->
-        <div class="row">
-            {% for product in products %}
-                <div class="col">
-                    <div class="card" style="width: 18rem; margin-bottom: 20px;">
-                        <img class="card-img-top" src="{{ product.url }}" alt="an image of '{{ product.name }}'">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ product.name }}</h5>
-                            <p class="card-text">{{ product.description }}</p>
-
-                            <!--button class="btn btn-primary">Order now!</button-->
-
-                            <!-- CREATE ORDER -->
-                            <form method="POST" action="/user/orders/create" style="display: inline;">
-                                <input type="hidden" name="product_id" value="{{ product.id }}">
-                                <input type="hidden" name="product_name" value="{{ product.name }}">
-                                <input type="hidden" name="product_description" value="{{ product.description }}">
-                                <input type="hidden" name="product_price" value="{{ product.price }}">
-                                <input type="hidden" name="product_url" value="{{ product.url }}">
-                                <button type="submit" class="btn btn-outline-primary">Order now!</button>
-                             </form>
-
-
-                        </div>
+{% if products|length > 0 %}
+    <!-- Container for cards -->
+    <div class="row">
+        {% for product in products %}
+            <div class="col-lg-3 col-md-3 col-sm-6 d-flex align-items-stretch"> <!-- 改成 col-lg-3 和 col-md-3 以确保大屏和中屏下一行四列 -->
+                <div class="card mb-4 d-flex flex-column" style="width: 100%; height: 100%;"> <!-- 添加 d-flex flex-column 和 height 100% -->
+                    <img class="card-img-top" src="{{ product.url }}" alt="an image of '{{ product.name }}'">
+                    <div class="card-body d-flex flex-column"> <!-- 添加 d-flex flex-column -->
+                        <h5 class="card-title text-left">{{ product.name }}</h5> <!-- 文本左对齐 -->
+                        <p class="card-text flex-grow-1 text-left">{{ product.description }}</p> <!-- 文本左对齐，flex-grow-1 确保这个元素填满所有可用空间 -->
+                        <form method="POST" action="/user/orders/create" style="display: inline;">
+                            <input type="hidden" name="product_id" value="{{ product.id }}">
+                            <input type="hidden" name="product_name" value="{{ product.name }}">
+                            <input type="hidden" name="product_description" value="{{ product.description }}">
+                            <input type="hidden" name="product_price" value="{{ product.price }}">
+                            <input type="hidden" name="product_url" value="{{ product.url }}">
+                            <button type="submit" class="btn btn-outline-primary mt-auto">Order now!</button> <!-- mt-auto 确保按钮靠底对齐 -->
+                        </form>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
-        <!--/div-->
-
-    {% else %}
-
-        <p>Oops, no products found.</p>
-
-    {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>Oops, no products found.</p>
+{% endif %}
 
 {% endblock %}

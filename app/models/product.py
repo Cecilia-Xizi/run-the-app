@@ -8,31 +8,33 @@ class Product(BaseModel):
     SHEET_NAME = "products"
 
 #这里要改
-    COLUMNS = ["name", "description", "price", "url"]
+    COLUMNS = ["name", "date", "description", "url"]
 
 #这里要改
 
     SEEDS = [
         {
-            'name': 'Strawberries',
-            'description': 'Juicy organic strawberries.',
-            'price': 4.99,
-            'url': 'https://picsum.photos/id/1080/360/200'
+            'name': 'Mobile Health Clinics',
+            'description': 'Mobile clinics that travel to underserved areas, providing essential medical services ranging from primary care to emergency interventions.',
+            'url': 'https://www.wdtn.com/wp-content/uploads/sites/45/2023/01/Mobile-Clinic-Premier-Health.jpg?w=1280'
         },
         {
-            'name': 'Cup of Tea',
-            'description': 'An individually-prepared tea or coffee of choice.',
-            'price': 3.49,
-            'url': 'https://picsum.photos/id/225/360/200'
+            'name': 'Health Education Workshops',
+            'description': 'Educate communities on preventive healthcare, nutritional best practices, and disease management, empowering individuals to take charge of their health.',
+            'url': 'https://operationeyesight.com/wp-content/uploads/2022/09/20220913-CHWs-and-Project-coordinator-conducting-health-education-sesssions-for-local-community.jpg'
         },
         {
-            'name': 'Textbook',
-            'description': 'It has all the answers.',
-            'price': 129.99,
-            'url': 'https://picsum.photos/id/24/360/200'
+            'name': 'Vaccination Drives',
+            'description': 'Vaccination drives to prevent the spread of infectious diseases, prioritizing the most vulnerable populations.',
+            'url': 'https://cdn1.internationalsos.com/-/jssmedia/images/igo-papua-vaccination-case-study-desktop.jpg?h=1080&iar=0&w=1920&rev=b5576b32588b42d69677b6f8ff09eb70&hash=4BDB4E5F314900433CF6E7A96892D24E'
+        },
+        {
+            'name': 'Community Service',
+            'description': 'Collaborating with local organizations and health departments, we enhance our reach and impact, ensuring that resources are utilized efficiently and effectively.',
+            'url': 'https://idahofoodbank.org/wp-content/uploads/2022/07/community-health-worker-opt.jpg'
         }
-    ]
-
+    
+           ]
 
 
 
@@ -60,7 +62,7 @@ if __name__ == "__main__":
 
     print("------------")
     print("FILTERING RECORDS...")
-    matches = Product.where(name="Strawberries") #要改
+    matches = Product.where(name="Mobile Health Clinics") #要改
     print(len(matches))
     product = matches[0]
     print(product.name)
@@ -68,9 +70,9 @@ if __name__ == "__main__":
     print("------------")
     print("CREATING NEW PRODUCT...")
     params = {
-        "name": "Blueberries", #要改
-        "price":3.99, #要改
-        "description":"organic blues",
-        "url": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "name": "Community Service", #要改
+        "date":"December/05/2026", #要改
+        "description":"Collaborating with local organizations and health departments, we enhance our reach and impact, ensuring that resources are utilized efficiently and effectively.",
+        "url": "https://idahofoodbank.org/wp-content/uploads/2022/07/community-health-worker-opt.jpg"
     }
     Product.create(params)

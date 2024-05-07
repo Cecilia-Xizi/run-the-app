@@ -28,17 +28,16 @@ def create_order():
 
     form_data = dict(request.form)
     print("FORM DATA:", form_data)
-    event_id = form_data["event_id"]
-    event_name = form_data["event_name"]
-
+    event_id = form_data["product_id"]
+    event_name = form_data["product_name"]
     current_user = session.get("current_user")
     user_email = current_user["email"]
 
     try:
         params = {
             "user_email": user_email,
-            "event_id": int(event_id),
-            "event_name": event_name,
+            "product_id": int(event_id),
+            "product_name": event_name,
         }
         #order = Order(params)
         #order.save()

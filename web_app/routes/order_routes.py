@@ -28,9 +28,8 @@ def create_order():
 
     form_data = dict(request.form)
     print("FORM DATA:", form_data)
-    product_id = form_data["product_id"]
-    product_name = form_data["product_name"]
-    product_price = form_data["product_price"]
+    event_id = form_data["event_id"]
+    event_name = form_data["event_name"]
 
     current_user = session.get("current_user")
     user_email = current_user["email"]
@@ -38,9 +37,8 @@ def create_order():
     try:
         params = {
             "user_email": user_email,
-            "product_id": int(product_id),
-            "product_name": product_name,
-            "product_price": float(product_price)
+            "event_id": int(event_id),
+            "event_name": event_name,
         }
         #order = Order(params)
         #order.save()
